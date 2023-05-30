@@ -1,22 +1,59 @@
+import React, { useState } from 'react';
+import Commits from '../commits';
 import "./tetris.css"
+
 
 const Tetris = ({ data, result }) => {
     // console.log(data)
+    const sortedData = data.sort((a, b) => b.stargazers_count - a.stargazers_count)
+    const [selectedItem, setSelectedItem] = useState(null)
+    // console.log(result)
+    const search = result
+
+    //When clicked, more information should pop up or go back to normal
+    const showItem = (item) => {
+        if (selectedItem === item) {
+            setSelectedItem(null)
+        }
+        else {
+            setSelectedItem(item)
+        }
+    }
     return (
         <>
-            <h1>Results for {result}...</h1>
-            <div>
-                <p className="container">
-                    {data.map((user, i) => (
-                        <p key={i} className="result-part">
-                            <img src={user.owner.avatar_url} alt="avatar" className="result-image" />
-                            <p>{user.owner.login}</p>
-                            {/* <p>{user.owner.id} </p> */}
-                        </p>
-                    ))}</p>
-            </div>
+            {(data.length === 0) ? (
+                <p>Loading</p>
+            ) : (
+                <div>
+                    <h1>Results for Netflix...</h1>
+                    <div>
+                        <p className="container">
+                            {sortedData.map((user, i) => (
+                                <div key={i}
+                                    className={`result-part ${selectedItem === user ? 'expanded' : ''}`}
+                                    onClick={() => showItem(user)}
+                                >
+                                    <h2>Name: {user.name}</h2>
+                                    <p>Language: {user.language} </p>
+                                    <p>Description: {user.description} </p>
+                                    <p>Star Count: {user.stargazers_count} </p>
+                                    <p>Fork Count: {user.forks_count} </p>
+                                    <p>Created At: {user.created_at} </p>
+                                    {selectedItem === user && (
+                                        <Commits search={search} user={user} />
+                                    )}
+                                </div>
+                            ))}</p>
+                    </div>
+                    <h1></h1>
+                </div>
+            )}
+
         </>
     )
 }
 
 export default Tetris
+
+//needed
+//Repo

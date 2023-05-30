@@ -28,16 +28,17 @@ function App() {
 
     //Fetching and querying based on our search
     const fetchSearch = async () => {
-      const response = await fetch(`/search?q=${searchQuery}&sort=stars&order=desc&per_page=10&page=1`)
+      const response = await fetch("/netflix-repos");
       const data = await response.json()
+      console.log(data)
       setSearchData(data)
     }
 
+
     fetchData();
 
-    if (searchQuery) {
-      fetchSearch()
-    }
+    fetchSearch()
+
 
   }, [searchQuery])
 
