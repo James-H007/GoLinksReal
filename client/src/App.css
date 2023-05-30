@@ -1,0 +1,39 @@
+.search-bar {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.search-bar-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: black;
+  font-family: 'Rubik';
+}
+
+
+
+.search-button {
+  width: 10%;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 5px;
+}

@@ -1,0 +1,35 @@
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-family: 'Rubik';
+}
+
+.result-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    min-width: 25%;
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.result-image {
+    height: 90%;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
