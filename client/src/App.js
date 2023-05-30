@@ -60,6 +60,8 @@ function App() {
           <p key={i}>{user}</p>
         ))
       )} */}
+
+
       <div className='search-bar-area'>
         <form onSubmit={handleSearch} className='search-bar'>
 
@@ -67,10 +69,10 @@ function App() {
           <button type="submit" className='search-button'>Search</button>
         </form>
       </div>
-      <Routes>
+      {/* <Routes>
         <Route path="/search" element={<Tetris data={searchData} result={searchQuery} />} />
-      </Routes>
-
+      </Routes> */}
+      <Tetris data={searchData} />
     </div>
   )
 }

@@ -4,7 +4,7 @@ const { Octokit } = require('@octokit/core');
 const app = express()
 
 const octokit = new Octokit({
-    auth: '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',
+    auth: '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',
 });
 
 app.get("/api", (req, res) => {
@@ -79,7 +79,7 @@ app.get('/netflix-repos', async (req, res) => {
     console.log("Hit")
     try {
         const octokit = new Octokit({
-            auth: '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',
+            auth: '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',
             userAgent: "Your-App",
             baseUrl: "https://api.github.com"
         });
@@ -105,7 +105,7 @@ app.get('/netflix-repo-commits/:repo', async (req, res) => {
         const { repo } = req.params;
 
         const octokit = new Octokit({
-            auth: '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',
+            auth: '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',
             userAgent: "Your-App",
             baseUrl: "https://api.github.com"
         });
