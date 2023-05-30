@@ -48,7 +48,7 @@ function App() {
     const query = e.target.elements.search.value
     setSearchQuery(query)
 
-    navigate(`/tetris`)
+    navigate(`/search`)
   }
 
   return (
@@ -68,7 +68,7 @@ function App() {
         </form>
       </div>
       <Routes>
-        <Route path="/tetris" element={<Tetris data={searchData} result={searchQuery} />} />
+        <Route path="/search" element={<Tetris data={searchData} result={searchQuery} />} />
       </Routes>
 
     </div>

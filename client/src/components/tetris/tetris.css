@@ -46,6 +46,11 @@
     font-size: 18px;
 }
 
+.result-part:hover {
+    border: solid 5px rgb(22, 146, 230);
+    background-color: rgb(231, 231, 231);
+}
+
 .container {
     display: flex;
     flex-direction: row;

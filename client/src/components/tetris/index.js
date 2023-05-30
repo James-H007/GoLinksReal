@@ -5,7 +5,11 @@ import "./tetris.css"
 
 const Tetris = ({ data, result }) => {
     // console.log(data)
-    const sortedData = data.sort((a, b) => b.stargazers_count - a.stargazers_count)
+    let sortedData
+    if (data) {
+        sortedData = data.sort((a, b) => b.stargazers_count - a.stargazers_count)
+    }
+
     const [selectedItem, setSelectedItem] = useState(null)
     // console.log(result)
     const search = result
@@ -21,7 +25,7 @@ const Tetris = ({ data, result }) => {
     }
     return (
         <>
-            {(data.length === 0) ? (
+            {((sortedData.length === 0) || (!sortedData)) ? (
                 <p>Loading</p>
             ) : (
                 <div>
