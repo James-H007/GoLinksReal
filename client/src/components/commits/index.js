@@ -30,7 +30,7 @@ const Commits = ({ user, search }) => {
             ) : <div>
                 {commit.map((committee, i) => (
                     <div className="commit-part">
-                        <p key={i}>Commit Message: {committee.commit.message} </p>
+                        <p key={i}>Commit Message: "{committee.commit.message}" </p>
                         <p key={i}>Commit Name: {committee.commit.committer.name} </p>
                         <p key={i}>Commit Hash: {committee.sha} </p>
                         <p key={i}>Date Created: {committee.commit.committer.date} </p>

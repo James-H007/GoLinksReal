@@ -36,7 +36,7 @@ const Tetris = ({ data, result }) => {
                                     <h2>Name: {user.name}</h2>
                                     <p>Language: {user.language} </p>
                                     <p>Description: {user.description} </p>
-                                    <p>Star Count: {user.stargazers_count} </p>
+                                    <p>Star Count: ⭐ {user.stargazers_count} </p>
                                     <p>Fork Count: {user.forks_count} </p>
                                     <p>Created At: {user.created_at} </p>
                                     {selectedItem === user && (
